@@ -6,6 +6,7 @@ fun main() {
     val target = 11
 
     println("--> Two sum indices: " + findTwoSum(target, numbers).contentToString())
+    println("--> Two sum indices: " + findTwoSum(6, intArrayOf(3, 3)).contentToString())
 
 }
 
@@ -16,7 +17,6 @@ fun findTwoSum(target: Int, numbers: IntArray): IntArray {
         if(hashMap.containsKey(difference)) {
             return intArrayOf(hashMap[difference]!!, index)
         }
-        println("Putting -> ${numbers[index]} at $index")
         hashMap[numbers[index]] = index
     }
     return intArrayOf()
