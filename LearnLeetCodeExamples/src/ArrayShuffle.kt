@@ -10,11 +10,11 @@ fun main() {
     println("Shuffled array --> " + getShuffledArray(intArrayOf(2,5,1,3,4,7), 3).contentToString())
 }
 
-fun getShuffledArray(numbers: IntArray, shufflePoint: Int): IntArray {
+fun getShuffledArray(numbers: IntArray, midSizeN: Int): IntArray {
     val shuffledArray = IntArray(numbers.size)
-    for (i in 0 until shufflePoint) {
+    for (i in 0 until midSizeN) {
         shuffledArray[2 * i] = numbers[i]
-        shuffledArray[2 * i + 1] = numbers[i + shufflePoint]
+        shuffledArray[2 * i + 1] = numbers[i + midSizeN]
     }
     return shuffledArray
 }
